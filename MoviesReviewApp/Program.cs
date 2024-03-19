@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddTransient<Seed>(); // adds injection at very beginning
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); // for automapper
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
