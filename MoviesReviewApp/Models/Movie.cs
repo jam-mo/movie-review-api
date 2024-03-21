@@ -2,7 +2,7 @@
 {
     public class Movie
     {
-        // pokemnon
+        
         public int Id { get; set; }
         public string Title { get; set; }
         
